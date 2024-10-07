@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define ROCK 1
+#define PAPER 2
+#define SCISSORS 3
+
+void printChoice(int choice) {
+    switch (choice) {
+        case ROCK:
+            printf("Rock\n");
+            break;
+        case PAPER:
+            printf("Paper\n");
+            break;
+        case SCISSORS:
+            printf("Scissors\n");
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+}
+
+int determineWinner(int player, int computer) {
+    if (player == computer) {
+        return 0; // Draw
+    } else if ((player == ROCK && computer == SCISSORS) ||
+               (player == PAPER &
